@@ -16,26 +16,29 @@ export default function ToDoList() {
   //    - removes the task at index `idx` from `tasks`
 
   return (
-    <div>
+    <div style={{ maxWidth: 400, margin: '1rem auto' }}>
       <h2>My To-Do List</h2>
 
-      <div>
+      <div style={{ display: 'flex', gap: '0.5rem' }}>
         <input
           type="text"
+          // TODO 5: bind value to draft state
+          
+          // TODO 6: onChange should update draft
+          
           placeholder="New task…"
-          // TODO 5: bind `value` to your `draft` state
-          // TODO 6: onChange should update `draft` with the new input
+          style={{ flex: 1, padding: '0.5rem' }}
         />
         <button
-          // TODO 7: onClick should call your `add()` function
+          // TODO 7: onClick should call add()
+          
+          style={{ padding: '0.5rem 1rem' }}
         >
           Add
         </button>
       </div>
 
-      <ul>
-        {
-        }
+      <ul style={{ listStyle: 'none', padding: 0, marginTop: '1rem' }}>
         {tasks.map((task, i) => (
           <li
             key={i}
